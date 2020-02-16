@@ -13,21 +13,15 @@
         <div class="card-body mx-3">
           <div class="row">
             <div class="col">
-              <p>Какая цель занятий?</p>
               <p>{{ form.client_goal.label }}</p>
               {% for goal in form.client_goal %}
               <div class="form-check">
-                <input type="radio" class="form-check-input" name="goal" value="{{ goal }}" id="{{ goal }}"
-                       {% if goal == primary_goal %}checked{% endif %}>
-                <label class="form-check-label" for="{{ goal }}">
                   {{ goal }} {{ goal.label }}
-                  <!--{{ goals[ goal ].sign }} {{ goals[ goal ].rus_name }} -->
-                </label>
               </div>
               {% endfor %}
             </div>
             <div class="col">
-            <p>Сколько времени есть?</p>
+            <p>{{ form.client_time.label }}</p>
             {% for time in form.client_time %}
             <div class="form-check">
               {{ time(class="form-check-input") }}

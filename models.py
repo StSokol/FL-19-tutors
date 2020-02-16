@@ -35,10 +35,10 @@ class ClassesRequest(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     client_name = db.Column(db.String, nullable=False)
     client_phone = db.Column(db.String, nullable=False)
-    goal = db.Column(db.String, nullable=False)
-    available_time = db.Column(db.String, nullable=False)
+    client_goal = db.Column(db.String, nullable=False)
+    client_time = db.Column(db.String, nullable=False)
 
     def __repr__(self):
-        return "<ClassesRequest(id='%s', client='%s', goal='%s')>" % (self.id, self.client_name, self.goal)
+        return "<ClassesRequest(id='%s', client='%s', goal='%s')>" % (self.id, self.client_name, self.client_goal)
 
 
